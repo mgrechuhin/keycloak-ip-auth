@@ -9,14 +9,14 @@ import org.keycloak.provider.ProviderConfigProperty;
 
 import java.util.List;
 
-public class IPAuthFactory implements AuthenticatorFactory {
+public class IPHttpHeaderAuthFactory implements AuthenticatorFactory {
 
-    public static final String ID = "ipauth";
+    public static final String ID = "ip-http-header-auth";
 
-    private static final Authenticator AUTHENTICATOR_INSTANCE = new IPAuth();
+    private static final Authenticator AUTHENTICATOR_INSTANCE = new IPHttpHeaderAuth();
 
     public String getDisplayType() {
-        return "Maks IP Authenticator";
+        return "Maks IP-Http-Header Authenticator";
     }
 
     public String getReferenceCategory() {
@@ -39,7 +39,7 @@ public class IPAuthFactory implements AuthenticatorFactory {
     }
 
     public String getHelpText() {
-        return "Auth by IP";
+        return "Auth by IP in HTTP Header";
     }
 
     public List<ProviderConfigProperty> getConfigProperties() {
